@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "thor", "thor.vcproj", "{F421A288-2A00-4D2A-AB5B-B339287CD9A8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "thor_tests", "thor_tests.vcproj", "{DF9E9E76-13F0-4F68-AB9D-5BC1AB33921E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F421A288-2A00-4D2A-AB5B-B339287CD9A8} = {F421A288-2A00-4D2A-AB5B-B339287CD9A8}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F421A288-2A00-4D2A-AB5B-B339287CD9A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F421A288-2A00-4D2A-AB5B-B339287CD9A8}.Debug|Win32.Build.0 = Debug|Win32
+		{F421A288-2A00-4D2A-AB5B-B339287CD9A8}.Release|Win32.ActiveCfg = Release|Win32
+		{F421A288-2A00-4D2A-AB5B-B339287CD9A8}.Release|Win32.Build.0 = Release|Win32
+		{DF9E9E76-13F0-4F68-AB9D-5BC1AB33921E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF9E9E76-13F0-4F68-AB9D-5BC1AB33921E}.Debug|Win32.Build.0 = Debug|Win32
+		{DF9E9E76-13F0-4F68-AB9D-5BC1AB33921E}.Release|Win32.ActiveCfg = Release|Win32
+		{DF9E9E76-13F0-4F68-AB9D-5BC1AB33921E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
