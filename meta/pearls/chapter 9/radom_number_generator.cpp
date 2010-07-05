@@ -1,14 +1,14 @@
-/* Copyright (C) 1999 Lucent Technologies
- * Author: Jon Bentley
- * Purpose: Generate random numbers with different policies.
- * Modified by: Su Shi(carmack.shi@gmail.com)
-*/
+// Copyright (C) 1999 Lucent Technologies
+// Author: Jon Bentley
+// Purpose: Generate random numbers with different policies.
+// Modified by: Su Shi(carmack.shi@gmail.com)
+
 
 #include <cstdlib>
 #include <cstdio>
 #include <cstddef>
 #include <cassert>
-using namespace std;
+#include <ctime>
 
 // If NODESIZE is 8, this program uses the special-case malloc.
 // Change NODESIZE to 0 to use the system malloc.
@@ -65,7 +65,7 @@ int BigRand() {
 class IntSetBins {
  public:
   IntSetBins(size_t max_elements_number, size_t max_value)
-    : elements_number_(0), 
+    : elements_number_(0),
       bins_number_(max_elements_number),
       max_value_(max_value) {
     bins_ = static_cast<Node**>(PoolMalloc(bins_number_*sizeof(Node*)));
@@ -86,14 +86,15 @@ class IntSetBins {
 
   void Insert(size_t value) {
     int hash_index = value / (1 + max_value_ / bins_number_);
-    //bins_[hash_index] = RecursiveSubInsert(bins_[hash_index], value);
+    // bins_[hash_index] = RecursiveSubInsert(bins_[hash_index], value);
     bins_[hash_index] = NonRecursiveSubInsert(bins_[hash_index], value);
   }
 
   void Report() {
     for (size_t i = 0; i < bins_number_; ++i)
-      for (Node* node = bins_[i]; node != sentinel_; node = node->next_)
-        /*printf("%d\n", node->value_)*/;
+      for (Node* node = bins_[i]; node != sentinel_; node = node->next_) {
+        // printf("%d\n", node->value_);
+      }
   }
 
   size_t size() const {
