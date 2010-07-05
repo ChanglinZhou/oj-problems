@@ -64,6 +64,7 @@
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				TargetMachine="1"
+				Profile="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -171,7 +172,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\promote_01_a.cpp"
+				RelativePath="..\..\meta\pearls\chapter 9\radom_number_generator.cpp"
 				>
 			</File>
 		</Filter>
