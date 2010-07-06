@@ -12,7 +12,7 @@
 
 // If NODESIZE is 8, this program uses the special-case malloc.
 // Change NODESIZE to 0 to use the system malloc.
-const int kBlockSize = 0;
+const int kBlockSize = 8;
 const int kBlockGroup = 1000;
 
 union Block {
@@ -80,8 +80,8 @@ class IntSetBins {
       for (Node* node = bins_[i]; node != sentinel_; node = node->next_)
         PoolFree(node);
 
-    PoolFree(bins_);
-    PoolFree(sentinel_);
+    PoolFree(bins_, sizeof(*bins_));
+    PoolFree(sentinel_, sizeof(*sentinel_));
   }
 
   void Insert(size_t value) {

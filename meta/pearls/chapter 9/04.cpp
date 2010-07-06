@@ -11,7 +11,7 @@ using namespace std;
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
-int FindMax(const vector<int> elements, size_t size) {
+int FindMax(const vector<int>& elements, size_t size) {
   assert(1 <= size && elements.size() >= size);
 
   if (size == 1)
@@ -27,7 +27,7 @@ int main() {
   vector<int> elements;
   elements.reserve(size);
 
-  for (size_t i = 0; i < size; ++i)
+  for (size_t i = size; i >= 1; --i)
     elements.push_back(i);
 
   cout << "Max element = " << FindMax(elements, size) << endl;
