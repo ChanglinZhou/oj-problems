@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\meta\pearls\chapter 9\radom_number_generator.cpp">
+    <ClCompile Include="..\..\meta\interview\ms_interview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
